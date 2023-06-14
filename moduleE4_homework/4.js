@@ -49,8 +49,8 @@ deviceInfo(){
 }
 }
 
-const heater1 = new Heater('indesit_zm900', 0.9, 'air')
-const washMashine1 = new washMashine('vitec_z12-31', 'A', 2.5, 'with dryer')
+const heater1 = new Heaters('indesit_zm900', 0.9, 'air')
+const washMashine1 = new washMashines('vitec_z12-31', 'A', 2.5, 'with dryer')
 
 heater1.deviceInfo()
 console.log(` `)
