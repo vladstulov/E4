@@ -1,4 +1,3 @@
-
 function Devices(name){
   this.enabled = false
 }
@@ -18,34 +17,34 @@ Devices.prototype.consumption = function(timeWork) {
 }  
  
 
-function Heater(name, capacityKw, type){
+function Heaters(name, capacityKw, type){
   this.name = name
   this.capacityKw = capacityKw
   this.type = type
 }
 
-Heater.prototype = new Devices()
-Heater.prototype.deviceInfo = function(){
+Heaters.prototype = new Devices()
+Heaters.prototype.deviceInfo = function(){
   console.log(`Параметры девайса обогреватель ${this.name}:`)
       console.log(`тип - ${this.type}, мощность - ${this.capacityKw} кВт`)
       console.log(`девайс включен - ${this.enabled}`)
 }
 
-function washMashine(name, deviceClass, capacityKw, type){
+function WashMashines(name, deviceClass, capacityKw, type){
   this.name = name
   this.deviceClass = deviceClass
   this.capacityKw = capacityKw
   this.type = type
 }
-washMashine.prototype = new Devices()  
-washMashine.prototype.deviceInfo = function(){
+WashMashines.prototype = new Devices()  
+WashMashines.prototype.deviceInfo = function(){
   console.log(`Параметры девайса стиральная машина ${this.name}:`)
       console.log(`класс энергопотребления - ${this.deviceClass}, тип - ${this.type}, мощность - ${this.capacityKw} кВт`)
       console.log(`девайс включен - ${this.enabled}`)
 }
 
-const heater1 = new Heater('indesit_zm900', 0.9, 'air')
-const washMashine1 = new washMashine('vitec_z12-31', 'A', 2.5, 'with dryer')
+const heater1 = new Heaters('indesit_zm900', 0.9, 'air')
+const washMashine1 = new WashMashines('vitec_z12-31', 'A', 2.5, 'with dryer')
 
 heater1.deviceInfo()
 console.log(` `)
